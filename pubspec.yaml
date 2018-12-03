@@ -1,7 +1,7 @@
 name: crypto_shadow
 description: CryptoCurrency Tracker for Android &amp; iOS
 author: Hugo EXTRAT <www.hugoextrat.com>
-homepage: https://github.com/huextrat/CryptoShadow
+homepage: https://github.com/huextrat/CryptoShorts
 
 dependencies:
   flutter:
@@ -17,18 +17,18 @@ dependencies:
   launch_review:
   cupertino_icons:
   onesignal:
+  http:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter:
-
   uses-material-design: true
 
   assets:
     - assets/loading.gif
-    - assets/CryptoShadow_logo.png
+    - assets/CryptoShorts_logo.png
     - assets/img/cred.png
     - assets/img/dnt.png
     - assets/img/bcbc.png
@@ -410,11 +410,10 @@ flutter:
     - assets/img/deez.png
     - assets/img/snt.png
 
-
   fonts:
-      - family: Poppins
-        fonts:
-          - asset: assets/fonts/Poppins-Regular.ttf
-            weight: 500
-          - asset: assets/fonts/Poppins-SemiBold.ttf
-            weight: 600
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600

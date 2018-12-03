@@ -6,28 +6,25 @@ import 'package:crypto_shadow/ui/detail/detail_page.dart';
 import 'package:crypto_shadow/theme.dart' as Theme;
 
 class CryptoSummaryFull extends StatelessWidget {
-
   final Crypto crypto;
   final bool horizontal;
 
   CryptoSummaryFull(this.crypto, {this.horizontal = true});
 
-  CryptoSummaryFull.vertical(this.crypto): horizontal = false;
+  CryptoSummaryFull.vertical(this.crypto) : horizontal = false;
 
   @override
   Widget build(BuildContext context) {
-
     final cryptoThumbnail = new Container(
-      margin: new EdgeInsets.symmetric(
-          vertical: 23.0
-      ),
-      alignment: horizontal ? FractionalOffset.centerLeft : FractionalOffset.center,
-
+      margin: new EdgeInsets.symmetric(vertical: 23.0),
+      alignment:
+          horizontal ? FractionalOffset.centerLeft : FractionalOffset.center,
       child: new Hero(
         tag: "crypto-hero-${crypto.id}",
         child: new FadeInImage(
-          placeholder: new AssetImage("assets/CryptoShadow_logo.png"),
-          image: new AssetImage("assets/img/"+crypto.symbol.toLowerCase()+".png"),
+          placeholder: new AssetImage("assets/CryptoShorts_logo.png"),
+          image: new AssetImage(
+              "assets/img/" + crypto.symbol.toLowerCase() + ".png"),
           fadeOutDuration: new Duration(milliseconds: 200),
           fadeOutCurve: Curves.decelerate,
           height: 80.0,
@@ -37,13 +34,16 @@ class CryptoSummaryFull extends StatelessWidget {
     );
 
     final cryptoCardContent = new Container(
-      margin: new EdgeInsets.fromLTRB(horizontal ? 39.0 : 16.0, horizontal ? 15.0 : 45.0, 16.0, 16.0),
+      margin: new EdgeInsets.fromLTRB(
+          horizontal ? 39.0 : 16.0, horizontal ? 15.0 : 45.0, 16.0, 16.0),
       constraints: new BoxConstraints.expand(),
       child: new Column(
-        crossAxisAlignment: horizontal ? CrossAxisAlignment.start : CrossAxisAlignment.center,
+        crossAxisAlignment:
+            horizontal ? CrossAxisAlignment.start : CrossAxisAlignment.center,
         children: <Widget>[
-          new Text(crypto.rank+". "+crypto.name+ " (" + crypto.symbol + ")", style: Theme.TextStyles.titleTextStyle),
-
+          new Text(
+              crypto.rank + ". " + crypto.name + " (" + crypto.symbol + ")",
+              style: Theme.TextStyles.titleTextStyle),
           new Row(
             mainAxisAlignment: MainAxisAlignment.center,
             textBaseline: TextBaseline.alphabetic,
@@ -51,17 +51,22 @@ class CryptoSummaryFull extends StatelessWidget {
             children: <Widget>[
               new Expanded(
                 flex: horizontal ? 1 : 0,
-
                 child: new Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
                     new Text(
-                      "\$"+crypto.formatCurrency(crypto.priceUsd).substring(0, crypto.formatCurrency(crypto.priceUsd).length - 4),
+                      "\$" +
+                          crypto.formatCurrency(crypto.priceUsd).substring(
+                              0,
+                              crypto.formatCurrency(crypto.priceUsd).length -
+                                  4),
                       style: Theme.TextStyles.commonTextStyle,
                     ),
                     new Text(
-                      crypto.formatCurrency(crypto.priceUsd).substring(crypto.formatCurrency(crypto.priceUsd).length - 4, crypto.formatCurrency(crypto.priceUsd).length),
+                      crypto.formatCurrency(crypto.priceUsd).substring(
+                          crypto.formatCurrency(crypto.priceUsd).length - 4,
+                          crypto.formatCurrency(crypto.priceUsd).length),
                       style: Theme.TextStyles.commonTextStyle14,
                     ),
                   ],
@@ -69,9 +74,7 @@ class CryptoSummaryFull extends StatelessWidget {
               ),
             ],
           ),
-
           new Separator(),
-
           new Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -81,36 +84,48 @@ class CryptoSummaryFull extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-
                     new Text("1h:", style: Theme.TextStyles.smallTextStyle),
                     new Icon(
                       getIcon(double.parse(crypto.percentChange1h).isNegative),
-                      color: double.parse(crypto.percentChange1h).isNegative ? Colors.red : Colors.green,
+                      color: double.parse(crypto.percentChange1h).isNegative
+                          ? Colors.red
+                          : Colors.green,
                       size: 20.0,
                     ),
                     new Text(
-                      (double.parse(crypto.percentChange1h).isNegative ? "" : "+") + crypto.percentChange1h + "%",
+                      (double.parse(crypto.percentChange1h).isNegative
+                              ? ""
+                              : "+") +
+                          crypto.percentChange1h +
+                          "%",
                       style: new TextStyle(
                         fontSize: 14.0,
-                        color: double.parse(crypto.percentChange1h).isNegative ? Colors.red : Colors.green,
+                        color: double.parse(crypto.percentChange1h).isNegative
+                            ? Colors.red
+                            : Colors.green,
                       ),
                     ),
-
                     new Text("  24h:", style: Theme.TextStyles.smallTextStyle),
                     new Icon(
                       getIcon(double.parse(crypto.percentChange24h).isNegative),
-                      color: double.parse(crypto.percentChange24h).isNegative ? Colors.red : Colors.green,
+                      color: double.parse(crypto.percentChange24h).isNegative
+                          ? Colors.red
+                          : Colors.green,
                       size: 20.0,
                     ),
                     new Text(
-                      (double.parse(crypto.percentChange24h).isNegative ? "" : "+") + crypto.percentChange24h + "%",
+                      (double.parse(crypto.percentChange24h).isNegative
+                              ? ""
+                              : "+") +
+                          crypto.percentChange24h +
+                          "%",
                       style: new TextStyle(
                         fontSize: 14.0,
-                        color: double.parse(crypto.percentChange24h).isNegative ? Colors.red : Colors.green,
+                        color: double.parse(crypto.percentChange24h).isNegative
+                            ? Colors.red
+                            : Colors.green,
                       ),
                     ),
-
-
                   ],
                 ),
               ),
@@ -125,14 +140,20 @@ class CryptoSummaryFull extends StatelessWidget {
                 new Text("  7d:", style: Theme.TextStyles.smallTextStyle),
                 new Icon(
                   getIcon(double.parse(crypto.percentChange7d).isNegative),
-                  color: double.parse(crypto.percentChange7d).isNegative ? Colors.red : Colors.green,
+                  color: double.parse(crypto.percentChange7d).isNegative
+                      ? Colors.red
+                      : Colors.green,
                   size: 20.0,
                 ),
                 new Text(
-                  (double.parse(crypto.percentChange7d).isNegative ? "" : "+") + crypto.percentChange7d + "%",
+                  (double.parse(crypto.percentChange7d).isNegative ? "" : "+") +
+                      crypto.percentChange7d +
+                      "%",
                   style: new TextStyle(
                     fontSize: 14.0,
-                    color: double.parse(crypto.percentChange7d).isNegative ? Colors.red : Colors.green,
+                    color: double.parse(crypto.percentChange7d).isNegative
+                        ? Colors.red
+                        : Colors.green,
                   ),
                 ),
               ],
@@ -154,7 +175,7 @@ class CryptoSummaryFull extends StatelessWidget {
         borderRadius: new BorderRadius.circular(80.0),
         boxShadow: <BoxShadow>[
           new BoxShadow(
-            color: new Color(0xFFee0979),
+            color: new Color(0xFF000000),
             blurRadius: 10.0,
             offset: new Offset(0.0, 10.0),
           ),
@@ -162,17 +183,16 @@ class CryptoSummaryFull extends StatelessWidget {
       ),
     );
 
-
     return new GestureDetector(
         onTap: horizontal
             ? () => Navigator.of(context).push(
-
-          new PageRouteBuilder(
-            pageBuilder: (_, __, ___) => new DetailPage(crypto: crypto),
-            transitionsBuilder: (context, animation, secondaryAnimation, child) =>
-            new FadeTransition(opacity: animation, child: child),
-          ),
-        )
+                  new PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => new DetailPage(crypto: crypto),
+                    transitionsBuilder: (context, animation, secondaryAnimation,
+                            child) =>
+                        new FadeTransition(opacity: animation, child: child),
+                  ),
+                )
             : null,
         child: new Container(
           margin: const EdgeInsets.symmetric(
@@ -185,8 +205,7 @@ class CryptoSummaryFull extends StatelessWidget {
               cryptoThumbnail,
             ],
           ),
-        )
-    );
+        ));
   }
 }
 

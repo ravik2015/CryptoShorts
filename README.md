@@ -1,4 +1,4 @@
-<h1 align="center">CryptoShadow <img src="https://hugoextrat.com/images/ic_launcher.png" alt="Flutter" width="50" height="50" /></h1>
+<h1 align="center">CryptoShorts <img src="https://hugoextrat.com/images/ic_launcher.png" alt="Flutter" width="50" height="50" /></h1>
 
 <div align="center">
   <a href="https://opensource.org/licenses/MIT">
@@ -13,7 +13,7 @@
   <a href="https://flutter.io/">
      <img src="https://img.shields.io/badge/Flutter-SDK-3BB9FF.svg?longCache=true&style=for-the-badge" alt="Flutter" />
   </a>
-   <a href="https://play.google.com/store/apps/details?id=com.huextrat.cryptoshadow">
+   <a href="https://play.google.com/store/apps/details?id=com.huextrat.CryptoShorts">
      <img src="https://img.shields.io/badge/version-2.1-pink.svg?longCache=true&style=for-the-badge" alt="Flutter" />
   </a>
 </div>
@@ -27,7 +27,7 @@
 </div>
 
 <div align="center">
-  <a href='https://play.google.com/store/apps/details?id=com.huextrat.cryptoshadow'><img width="320" height="130" alt='Get in on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+  <a href='https://play.google.com/store/apps/details?id=com.huextrat.CryptoShorts'><img width="320" height="130" alt='Get in on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
 </div>
 <div align="center">
   <strong>CryptoCurrency Tracker for Android & iOS</strong>
@@ -41,10 +41,10 @@
   <img src="https://hugoextrat.com/images/github/Screen_2.png" height="540"/>
   <img src="https://hugoextrat.com/images/github/Screen_3.png" height="540"/>
   <img src="https://hugoextrat.com/images/github/Screen_4.png" height="540"/>
-  <img src="https://hugoextrat.com/images/github/CryptoShadow.png" height="540"/>
-  <img src="https://hugoextrat.com/images/github/CryptoShadow3.png" height="540"/>
-  <img src="https://hugoextrat.com/images/github/CryptoShadow4.png" height="540"/>
-  <img src="https://hugoextrat.com/images/github/CryptoShadow5.png" height="540"/>
+  <img src="https://hugoextrat.com/images/github/CryptoShorts.png" height="540"/>
+  <img src="https://hugoextrat.com/images/github/CryptoShorts3.png" height="540"/>
+  <img src="https://hugoextrat.com/images/github/CryptoShorts4.png" height="540"/>
+  <img src="https://hugoextrat.com/images/github/CryptoShorts5.png" height="540"/>
 </div>
 
 ### TODO

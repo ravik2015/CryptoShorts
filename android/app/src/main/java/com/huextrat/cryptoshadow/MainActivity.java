@@ -1,4 +1,4 @@
-package com.huextrat.cryptoshadow;
+package com.huextrat.CryptoShorts;
 
 import android.os.Bundle;
 

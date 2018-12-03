@@ -38,15 +38,14 @@ Color getSymbolColor(String symbol) {
 }
 
 class Colors2 {
-
   const Colors2();
 
   static const Color appBarTitle = const Color(0xFFFFFFFF);
   static const Color appBarIconColor = const Color(0xFFFFFFFF);
   static const Color appBarDetailBackground = const Color(0x00FFFFFF);
 
-  static const Color appBarGradientStart = const Color(0xFFee0979);
-  static const Color appBarGradientEnd = const Color(0xFFff6a00);
+  static const Color appBarGradientStart = const Color(0xFF2161a2);
+  static const Color appBarGradientEnd = const Color(0xFF215185);
 
   static const Color cryptoCard = const Color(0xFFFFFFFF);
 
@@ -59,9 +58,10 @@ class Colors2 {
   static const Color colorBlack2 = const Color(0x99000000);
 
   static const Color colorBlue = const Color(0xFF2196F3);
+  static const Color colorOrangeMix = const Color(0xFFd59158);
 
   static const primaryGradient = const LinearGradient(
-    colors: const [const Color(0xFFee0979), const Color(0xFFff6a00)],
+    colors: const [const Color(0xFF2161a2), const Color(0xFF215185)],
     stops: const [0.0, 1.0],
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
@@ -76,46 +76,26 @@ class Dimens {
 }
 
 class TextStyles {
-
   const TextStyles();
 
-  static final baseTextStyle = const TextStyle(
-      fontFamily: 'Poppins'
-  );
+  static final baseTextStyle = const TextStyle(fontFamily: 'Poppins');
 
   static final smallTextStyle = commonTextStyle.copyWith(
     fontSize: 12.0,
   );
 
   static final commonTextStyle = baseTextStyle.copyWith(
-      color: Colors2.colorBlack2,
-      fontSize: 17.0,
-      fontWeight: FontWeight.w400
-  );
+      color: Colors2.colorBlack2, fontSize: 17.0, fontWeight: FontWeight.w400);
 
   static final commonTextStyle14 = baseTextStyle.copyWith(
-      color: Colors2.colorBlack2,
-      fontSize: 16.0,
-      fontWeight: FontWeight.w400
-  );
+      color: Colors2.colorBlack2, fontSize: 16.0, fontWeight: FontWeight.w400);
 
   static final commonTextStyleWhite = baseTextStyle.copyWith(
-      color: Colors2.colorWhite,
-      fontSize: 17.0,
-      fontWeight: FontWeight.w400
-  );
+      color: Colors2.colorWhite, fontSize: 17.0, fontWeight: FontWeight.w400);
 
   static final titleTextStyle = baseTextStyle.copyWith(
-      color: Colors2.colorBlack,
-      fontSize: 18.0,
-      fontWeight: FontWeight.w600
-  );
+      color: Colors2.colorBlack, fontSize: 18.0, fontWeight: FontWeight.w600);
 
   static final headerTextStyle = baseTextStyle.copyWith(
-      color: Colors2.colorWhite,
-      fontSize: 20.0,
-      fontWeight: FontWeight.w400
-  );
-
-
+      color: Colors2.colorWhite, fontSize: 20.0, fontWeight: FontWeight.w400);
 }

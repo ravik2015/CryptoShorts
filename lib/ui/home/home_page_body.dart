@@ -11,10 +11,8 @@ import 'package:flutter/material.dart';
 import 'package:crypto_shadow/model/cryptos.dart';
 import 'package:crypto_shadow/ui/detail/crypto_summary.dart';
 
-
 import 'package:http/http.dart' as http;
 import 'package:crypto_shadow/theme.dart' as Theme;
-
 
 class HomePageBody extends StatefulWidget {
   @override
@@ -22,17 +20,15 @@ class HomePageBody extends StatefulWidget {
 }
 
 class HomePageBodyState extends State<HomePageBody> {
-
   List data;
   bool isLoading = true;
 
   Future<bool> getDataFromAPI() async {
-
     var response = await http.get(
-      Uri.encodeFull("https://api.coinmarketcap.com/v1/ticker/?convert="+"EUR"+"&limit=100"),
-      headers: {
-        "Accept": "application/json"
-      },
+      Uri.encodeFull("https://api.coinmarketcap.com/v1/ticker/?convert=" +
+          "EUR" +
+          "&limit=100"),
+      headers: {"Accept": "application/json"},
     );
 
     this.setState(() {
@@ -67,7 +63,7 @@ class HomePageBodyState extends State<HomePageBody> {
   }
 
   Future<bool> getData() async {
-    if(!(await getDataFromLocal())) {
+    if (!(await getDataFromLocal())) {
       await getDataFromAPI();
     }
     return true;
@@ -85,7 +81,7 @@ class HomePageBodyState extends State<HomePageBody> {
   }
 
   Crypto getCoin(int index) {
-    if(data != null){
+    if (data != null) {
       return new Crypto(
         data[index]["id"],
         data[index]["name"],
@@ -106,7 +102,6 @@ class HomePageBodyState extends State<HomePageBody> {
         data[index]["market_cap_eur"],
       );
     }
-
   }
 
   Future refresh() async {
@@ -119,14 +114,15 @@ class HomePageBodyState extends State<HomePageBody> {
       child: new Container(
         decoration: new BoxDecoration(
           gradient: new LinearGradient(
-              colors: [Theme.Colors2.appBarGradientStart, Theme.Colors2.appBarGradientEnd],
+              colors: [
+                Theme.Colors2.appBarGradientStart,
+                Theme.Colors2.appBarGradientEnd
+              ],
               begin: const FractionalOffset(0.0, 0.0),
               end: const FractionalOffset(1.0, 0.0),
               stops: [0.0, 1.0],
-              tileMode: TileMode.clamp
-          ),
+              tileMode: TileMode.clamp),
         ),
-
         child: new RefreshIndicator(
           onRefresh: refresh,
           child: new CustomScrollView(
@@ -135,19 +131,19 @@ class HomePageBodyState extends State<HomePageBody> {
             slivers: <Widget>[
               new SliverPadding(
                 padding: const EdgeInsets.symmetric(vertical: 1.0),
-
                 sliver: new SliverList(
-                  delegate: data != null ? new SliverChildBuilderDelegate(
-                        (context, index) => new CryptoSummary(getCoin(index)),
-                    childCount: data==null ? 100 : data.length,
-                  ) : new SliverChildBuilderDelegate(
-                        (context, index) => new CircularProgressIndicator(),
-                    childCount: 0,
-                  ),
+                  delegate: data != null
+                      ? new SliverChildBuilderDelegate(
+                          (context, index) => new CryptoSummary(getCoin(index)),
+                          childCount: data == null ? 100 : data.length,
+                        )
+                      : new SliverChildBuilderDelegate(
+                          (context, index) => new CircularProgressIndicator(),
+                          childCount: 0,
+                        ),
                 ),
               ),
             ],
-
           ),
         ),
       ),

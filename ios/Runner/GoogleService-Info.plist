@@ -17,11 +17,11 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.huextrat.cryptoshadow</string>
+	<string>com.huextrat.CryptoShorts</string>
 	<key>PROJECT_ID</key>
-	<string>cryptoshadow-huextrat</string>
+	<string>CryptoShorts-huextrat</string>
 	<key>STORAGE_BUCKET</key>
-	<string>cryptoshadow-huextrat.appspot.com</string>
+	<string>CryptoShorts-huextrat.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -35,6 +35,6 @@
 	<key>GOOGLE_APP_ID</key>
 	<string>1:563182876407:ios:249d9530b31e0e6c</string>
 	<key>DATABASE_URL</key>
-	<string>https://cryptoshadow-huextrat.firebaseio.com</string>
+	<string>https://CryptoShorts-huextrat.firebaseio.com</string>
 </dict>
 </plist>
