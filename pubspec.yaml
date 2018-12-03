@@ -1,7 +1,7 @@
 name: crypto_shadow
 description: CryptoCurrency Tracker for Android &amp; iOS
-author: Hugo EXTRAT <www.hugoextrat.com>
-homepage: https://github.com/huextrat/CryptoShorts
+author: Ravi Kumar
+homepage: https://github.com/ravik2015/CryptoShorts
 
 dependencies:
   flutter:
